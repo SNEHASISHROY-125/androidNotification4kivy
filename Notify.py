@@ -1,5 +1,6 @@
-from kivy.app import App
-from kivy.uix.button import Button
+'''
+androidNotification4kivy©SnehasishRoy & Contributors 2025-2026
+'''
 
 ## Notification
 from jnius import autoclass, cast
@@ -93,6 +94,8 @@ def to_signed_int32(val):
 def notify(**kwargs):
   '''
   *title  ``notification title``
+  *color  ``color like:0xFFFF5722``
+  *MS:int ``Timeout in ms after dismiss``
   *content ``notification content text``
   *small_icon ``notification small-icon-right``
   *large_icon ``notification large-icon-left``
@@ -169,18 +172,3 @@ def notify(**kwargs):
   # Show the notification
   else : manager.notify(pid, builder.build())
 
-
-
-class Notify(App):
-
-  def build(self):
-    btn = Button(text="notify test")
-    btn.bind(on_release=self.notify)
-    return btn
-
-
-  def notify(self,*args):
-    print("showing Notification!")
-    notify()
-
-Notify().run()
