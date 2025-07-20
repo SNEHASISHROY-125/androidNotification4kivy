@@ -1,0 +1,6 @@
+<receiver android:name="org.test.notify.ResetReceiver"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="com.example.ACTION_RESET" />
+    </intent-filter>
+</receiver>
