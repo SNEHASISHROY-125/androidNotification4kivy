@@ -26,10 +26,10 @@ SDK_INT = Build_VERSION.SDK_INT  # ✅ This works
 context = PythonActivity.mActivity
 
 # Notification Channel (for Android 8+)
-channel_id = "my_channel"
+channel_id = "androidNotification4kivy"
 if SDK_INT >= 26:
     importance = autoclass('android.app.NotificationManager').IMPORTANCE_DEFAULT
-    channel = NotificationChannel(channel_id, "My Channel", importance)
+    channel = NotificationChannel(channel_id, "androidNotification4kivy_channel", importance)
     manager = context.getSystemService(Context.NOTIFICATION_SERVICE)
     manager.createNotificationChannel(channel)
 
