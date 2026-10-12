@@ -128,7 +128,8 @@ def notify(**kwargs):
   # image when expaned
   if kwargs.get("expanded_image") and not kwargs.get("big_content") : builder.setStyle(BigPictureStyle().bigPicture(load(kwargs["expanded_image"])))
   # progress bar
-  if kwargs.get("progress_value") : builder.setProgress(100, kwargs["progress_value"], False); # false = determinate
+  if kwargs.get("progress_value") and not kwargs.get("progress_value") !=0 : builder.setProgress(100, kwargs["progress_value"], autoclass("java.lang.Boolean").FALSE); # false = determinate
+  else : builder.setProgress(0 , 0 , autoclass("java.lang.Boolean").TRUE)
   # sticky notification
   if kwargs.get("dismissable") : builder.setOngoing(True)   # https://developer.android.com/reference/android/app/Notification.Builder#setOngoing(boolean)  | works api <=36 
   # Action Button
