@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/notification_card_dark">
+
+    <!-- App header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:background="@drawable/icon_tile_blue"
+            android:text="in"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/social_app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="LinkedIn · 4m"
+            android:textColor="#B8CBE0"
+            android:textSize="11sp" />
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:text="⌄"
+            android:textColor="#DCEBFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Sender profile and message -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/social_avatar"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/avatar_placeholder"
+            android:scaleType="centerCrop"
+            android:contentDescription="Sender profile photo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="11dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/social_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Priya Sharma"
+                android:textColor="#F4F8FF"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/social_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Viewed your profile and sent you a message."
+                android:textColor="#DCE7F5"
+                android:textSize="12sp"
+                android:maxLines="3"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/social_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Software Engineer · 2 min ago"
+                android:textColor="#A9C1DA"
+                android:textSize="11sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Message preview -->
+    <TextView
+        android:id="@+id/social_quote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:padding="12dp"
+        android:background="@drawable/message_bubble"
+        android:text="“Hi! I really liked your work on the mobile app...”"
+        android:textColor="#26405C"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <!-- Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/social_reply"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/action_button_blue"
+            android:text="▢  Reply"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/social_profile"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:background="@drawable/action_button_outline"
+            android:text="♙  View profile"
+            android:textColor="#E7F1FF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

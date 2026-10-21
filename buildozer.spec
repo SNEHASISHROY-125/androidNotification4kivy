@@ -96,7 +96,7 @@ fullscreen = 0
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
 #android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
-android.permissions = android.permission.POST_NOTIFICATIONS , android.permission.INTERNET
+# android.permissions = android.permission.POST_NOTIFICATIONS , android.permission.INTERNET
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
@@ -105,7 +105,7 @@ android.permissions = android.permission.POST_NOTIFICATIONS , android.permission
 android.api = 36
 
 # (int) Minimum API your APK / AAB will support.
-android.minapi = 23
+# android.minapi = 23
 
 # (int) Android SDK version to use
 #android.sdk = 20
@@ -148,11 +148,11 @@ android.accept_sdk_license = True
 
 # (str) Extra xml to write directly inside the <manifest> element of AndroidManifest.xml
 # use that parameter to provide a filename from where to load your custom XML code
-#android.extra_manifest_xml = ./src/android/extra_manifest.xml
+# android.extra_manifest_xml = ./src/android/extra_manifest.xml
 
 # (str) Extra xml to write directly inside the <manifest><application> tag of AndroidManifest.xml
 # use that parameter to provide a filename from where to load your custom XML arguments:
-android.extra_manifest_application_arguments = ./src/android/AndroidManifest.xml
+# android.extra_manifest_application_arguments = ./src/android/custom.xml
 
 # (str) Full name including package path of the Java class that implements Python Service
 # use that parameter to set custom Java class which extends PythonService
@@ -178,7 +178,7 @@ android.extra_manifest_application_arguments = ./src/android/AndroidManifest.xml
 
 # (list) List of Java files to add to the android project (can be java or a
 # directory containing the files)
-#android.add_src =
+# android.add_src = ./src
 
 # (list) Android AAR archives to add
 #android.add_aars =
@@ -198,16 +198,16 @@ android.extra_manifest_application_arguments = ./src/android/AndroidManifest.xml
 # android.add_resources = legal_icons:drawable
 # 3) A directory, here 'legal_resources' must contain one or more directories, 
 # each of a resource kind:  drawable, xml, etc...
-# android.add_resources = legal_resources
+android.add_resources = ./src/res
 #android.add_resources =
 
 # (list) Gradle dependencies to add
-android.gradle_dependencies = androidx.work:work-runtime:2.7.1 , androidx.core:core:1.10.1
+# android.gradle_dependencies = androidx.work:work-runtime:2.7.1 , androidx.core:core:1.10.1
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
 # android.enable_androidx requires android.api >= 28
-android.enable_androidx = True
+# android.enable_androidx = True
 
 # (list) add java compile options
 # this can for example be necessary when importing certain java libraries using the 'android.gradle_dependencies' option
@@ -237,7 +237,7 @@ android.enable_androidx = True
 #android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png
 
 # (str) XML file to include as an intent filters in <activity> tag
-#android.manifest.intent_filters =
+# android.manifest.intent_filters = src/intent-filter/custom.xml
 
 # (list) Copy these files to src/main/res/xml/ (used for example with intent-filters)
 #android.res_xml = PATH_TO_FILE,
@@ -334,7 +334,7 @@ p4a.branch = develop
 #p4a.local_recipes =
 
 # (str) Filename to the hook for p4a
-#p4a.hook =
+p4a.hook = hook.py
 
 # (str) Bootstrap to use for android builds
 # p4a.bootstrap = sdl2

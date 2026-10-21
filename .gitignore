@@ -1,3 +1,7 @@
 test.py
 .buildozer
 bin
+.archive
+__pycache__
+clean.sh
+build.sh

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp"
+    android:background="@drawable/notification_card_dark">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="7dp"
+        android:background="@drawable/icon_tile_blue"
+        android:src="@drawable/ic_upload"
+        android:contentDescription="Transfer" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/transfer_compact_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uploading backup.zip"
+            android:textColor="#F4F8FF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/transfer_compact_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="42% · 2.4 MB/s"
+            android:textColor="#B8CBE0"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/transfer_compact_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="48dp"
+        android:layout_height="5dp"
+        android:max="100"
+        android:progress="42"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progress_blue" />
+
+</LinearLayout>
